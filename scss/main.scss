@@ -114,6 +114,12 @@ div[class^="col-"] {
   .gutter-l-#{$i} {
     margin-left: $gutter * $i;
   }
+  .gutter-hor-#{$i} {
+    margin: 0 $gutter * $i;
+  }
+  .gutter-ver-#{$i} {
+    margin: $gutter * $i 0;
+  }
 }
 
 /* columns */
