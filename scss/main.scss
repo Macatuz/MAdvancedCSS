@@ -1,6 +1,12 @@
+body {
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+  font-family: "Open Sans", sans-serif;
+}
+
 /*utillities */
 $main-color: #563d7c;
 $secondary-color: #7952b3;
+$bg-color: #f8f9fa;
 $grey: #6c757d;
 $yellow: #ffe484;
 $blue: #007bff;
@@ -18,10 +24,25 @@ $width: 1em;
 $text-size: 0.25rem;
 $text-weight: 100;
 $line-height: 0.25;
+
+// text-colors
+
+.grey {
+  color: $grey;
+}
+
+.white {
+  color: $white;
+}
+
+.blue {
+  color: $blue;
+}
+
 .row {
-  display:flex;
-  flex-wrap:wrap;
-} 
+  display: flex;
+  flex-wrap: wrap;
+}
 .container {
   width: 90%;
   margin: 0 auto;
@@ -57,6 +78,9 @@ div[class^="col-"] {
 @mixin display($value) {
   display: $value;
 }
+@mixin float($value) {
+  float: $value;
+}
 
 .fluid-right {
   right: 0;
@@ -66,7 +90,6 @@ div[class^="col-"] {
 .clear {
   clear: both;
 }
-
 
 // Gutter Section
 .gutter-0 {
@@ -136,6 +159,9 @@ div[class^="col-"] {
   .padding-vert-#{$i} {
     padding: $padding * $i 0;
   }
+  .padding-#{$i} {
+    padding: $padding * $i;
+  }
 }
 
 /*height */
@@ -161,7 +187,7 @@ div[class^="col-"] {
 /*text -size*/
 @for $i from 1 through 20 {
   .text-size-#{$i} {
-    font-size: $height * $i;
+    font-size: $text-size * $i;
   }
 }
 
@@ -186,10 +212,7 @@ div[class^="col-"] {
     color: $main-color;
   }
   h2 {
-
   }
-
-
 }
 .text-center {
   @include text-position(center);
@@ -213,24 +236,37 @@ div[class^="col-"] {
       }
     }
     ul {
-      display:inline-block;
+      display: inline-block;
     }
     div {
       display: inline-block;
-      float: right;
+      @include float(right);
       a {
         display: inline-block;
-        color:$white;
+        color: $white;
         @include text-decoration(none, $white);
       }
-
     }
+  }
+}
+
+.install-section {
+  background-color: $bg-color;
+  div {
+  }
+
+  svg {
+    outline-color: #007bff;
+  }
+
+  h3 {
   }
 }
 
 //footer
 
 .footer {
+  background-color: $bg-color;
   div {
     ul {
       li {

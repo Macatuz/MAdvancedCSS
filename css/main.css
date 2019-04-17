@@ -1,4 +1,17 @@
+body {
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto");
+  font-family: "Open Sans", sans-serif; }
+
 /*utillities */
+.grey {
+  color: #6c757d; }
+
+.white {
+  color: white; }
+
+.blue {
+  color: #007bff; }
+
 .row {
   display: flex;
   flex-wrap: wrap; }
@@ -355,6 +368,9 @@ div[class^="col-"] {
 .padding-vert-1 {
   padding: 0.25rem 0; }
 
+.padding-1 {
+  padding: 0.25rem; }
+
 .padding-t-2 {
   padding-top: 0.5rem; }
 
@@ -375,6 +391,9 @@ div[class^="col-"] {
 
 .padding-vert-2 {
   padding: 0.5rem 0; }
+
+.padding-2 {
+  padding: 0.5rem; }
 
 .padding-t-3 {
   padding-top: 0.75rem; }
@@ -397,6 +416,9 @@ div[class^="col-"] {
 .padding-vert-3 {
   padding: 0.75rem 0; }
 
+.padding-3 {
+  padding: 0.75rem; }
+
 .padding-t-4 {
   padding-top: 1rem; }
 
@@ -417,6 +439,9 @@ div[class^="col-"] {
 
 .padding-vert-4 {
   padding: 1rem 0; }
+
+.padding-4 {
+  padding: 1rem; }
 
 .padding-t-5 {
   padding-top: 1.25rem; }
@@ -439,6 +464,9 @@ div[class^="col-"] {
 .padding-vert-5 {
   padding: 1.25rem 0; }
 
+.padding-5 {
+  padding: 1.25rem; }
+
 .padding-t-6 {
   padding-top: 1.5rem; }
 
@@ -459,6 +487,9 @@ div[class^="col-"] {
 
 .padding-vert-6 {
   padding: 1.5rem 0; }
+
+.padding-6 {
+  padding: 1.5rem; }
 
 .padding-t-7 {
   padding-top: 1.75rem; }
@@ -481,6 +512,9 @@ div[class^="col-"] {
 .padding-vert-7 {
   padding: 1.75rem 0; }
 
+.padding-7 {
+  padding: 1.75rem; }
+
 .padding-t-8 {
   padding-top: 2rem; }
 
@@ -501,6 +535,9 @@ div[class^="col-"] {
 
 .padding-vert-8 {
   padding: 2rem 0; }
+
+.padding-8 {
+  padding: 2rem; }
 
 .padding-t-9 {
   padding-top: 2.25rem; }
@@ -523,6 +560,9 @@ div[class^="col-"] {
 .padding-vert-9 {
   padding: 2.25rem 0; }
 
+.padding-9 {
+  padding: 2.25rem; }
+
 .padding-t-10 {
   padding-top: 2.5rem; }
 
@@ -543,6 +583,9 @@ div[class^="col-"] {
 
 .padding-vert-10 {
   padding: 2.5rem 0; }
+
+.padding-10 {
+  padding: 2.5rem; }
 
 .padding-t-11 {
   padding-top: 2.75rem; }
@@ -565,6 +608,9 @@ div[class^="col-"] {
 .padding-vert-11 {
   padding: 2.75rem 0; }
 
+.padding-11 {
+  padding: 2.75rem; }
+
 .padding-t-12 {
   padding-top: 3rem; }
 
@@ -585,6 +631,9 @@ div[class^="col-"] {
 
 .padding-vert-12 {
   padding: 3rem 0; }
+
+.padding-12 {
+  padding: 3rem; }
 
 .padding-t-13 {
   padding-top: 3.25rem; }
@@ -607,6 +656,9 @@ div[class^="col-"] {
 .padding-vert-13 {
   padding: 3.25rem 0; }
 
+.padding-13 {
+  padding: 3.25rem; }
+
 .padding-t-14 {
   padding-top: 3.5rem; }
 
@@ -627,6 +679,9 @@ div[class^="col-"] {
 
 .padding-vert-14 {
   padding: 3.5rem 0; }
+
+.padding-14 {
+  padding: 3.5rem; }
 
 .padding-t-15 {
   padding-top: 3.75rem; }
@@ -649,6 +704,9 @@ div[class^="col-"] {
 .padding-vert-15 {
   padding: 3.75rem 0; }
 
+.padding-15 {
+  padding: 3.75rem; }
+
 .padding-t-16 {
   padding-top: 4rem; }
 
@@ -669,6 +727,9 @@ div[class^="col-"] {
 
 .padding-vert-16 {
   padding: 4rem 0; }
+
+.padding-16 {
+  padding: 4rem; }
 
 .padding-t-17 {
   padding-top: 4.25rem; }
@@ -691,6 +752,9 @@ div[class^="col-"] {
 .padding-vert-17 {
   padding: 4.25rem 0; }
 
+.padding-17 {
+  padding: 4.25rem; }
+
 .padding-t-18 {
   padding-top: 4.5rem; }
 
@@ -711,6 +775,9 @@ div[class^="col-"] {
 
 .padding-vert-18 {
   padding: 4.5rem 0; }
+
+.padding-18 {
+  padding: 4.5rem; }
 
 .padding-t-19 {
   padding-top: 4.75rem; }
@@ -733,6 +800,9 @@ div[class^="col-"] {
 .padding-vert-19 {
   padding: 4.75rem 0; }
 
+.padding-19 {
+  padding: 4.75rem; }
+
 .padding-t-20 {
   padding-top: 5rem; }
 
@@ -753,6 +823,9 @@ div[class^="col-"] {
 
 .padding-vert-20 {
   padding: 5rem 0; }
+
+.padding-20 {
+  padding: 5rem; }
 
 /*height */
 .h-100 {
@@ -884,64 +957,64 @@ div[class^="col-"] {
 
 /*text -size*/
 .text-size-1 {
-  font-size: 1em; }
+  font-size: 0.25rem; }
 
 .text-size-2 {
-  font-size: 2em; }
+  font-size: 0.5rem; }
 
 .text-size-3 {
-  font-size: 3em; }
+  font-size: 0.75rem; }
 
 .text-size-4 {
-  font-size: 4em; }
+  font-size: 1rem; }
 
 .text-size-5 {
-  font-size: 5em; }
+  font-size: 1.25rem; }
 
 .text-size-6 {
-  font-size: 6em; }
+  font-size: 1.5rem; }
 
 .text-size-7 {
-  font-size: 7em; }
+  font-size: 1.75rem; }
 
 .text-size-8 {
-  font-size: 8em; }
+  font-size: 2rem; }
 
 .text-size-9 {
-  font-size: 9em; }
+  font-size: 2.25rem; }
 
 .text-size-10 {
-  font-size: 10em; }
+  font-size: 2.5rem; }
 
 .text-size-11 {
-  font-size: 11em; }
+  font-size: 2.75rem; }
 
 .text-size-12 {
-  font-size: 12em; }
+  font-size: 3rem; }
 
 .text-size-13 {
-  font-size: 13em; }
+  font-size: 3.25rem; }
 
 .text-size-14 {
-  font-size: 14em; }
+  font-size: 3.5rem; }
 
 .text-size-15 {
-  font-size: 15em; }
+  font-size: 3.75rem; }
 
 .text-size-16 {
-  font-size: 16em; }
+  font-size: 4rem; }
 
 .text-size-17 {
-  font-size: 17em; }
+  font-size: 4.25rem; }
 
 .text-size-18 {
-  font-size: 18em; }
+  font-size: 4.5rem; }
 
 .text-size-19 {
-  font-size: 19em; }
+  font-size: 4.75rem; }
 
 .text-size-20 {
-  font-size: 20em; }
+  font-size: 5rem; }
 
 .fw-1 {
   font-weight: 100; }
@@ -1061,14 +1134,21 @@ div[class^="col-"] {
       text-decoration: none;
       color: white; }
 
-.footer div ul li {
-  display: inline-block; }
-.footer a {
-  text-decoration: none;
-  color: black;
-  color: black; }
-  .footer a:hover {
-    text-decoration: underline;
-    color: blue; }
+.install-section {
+  background-color: #f8f9fa; }
+  .install-section svg {
+    outline-color: #007bff; }
+
+.footer {
+  background-color: #f8f9fa; }
+  .footer div ul li {
+    display: inline-block; }
+  .footer a {
+    text-decoration: none;
+    color: black;
+    color: black; }
+    .footer a:hover {
+      text-decoration: underline;
+      color: blue; }
 
 /*# sourceMappingURL=main.css.map */
