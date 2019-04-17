@@ -10,20 +10,24 @@ $columns: 12;
 $gutter: 0.25rem;
 $btn-width: 2rem;
 $btn-height: 1rem;
+$border-height: 0.25rem;
+$border-radius: 0.25rem;
 $padding: 0.25rem;
 $height: 1em;
 $width: 1em;
 $text-size: 0.25rem;
 $text-weight: 100;
 $line-height: 0.25;
+.row {
+  display:flex;
+  flex-wrap:wrap;
+} 
 .container {
   width: 90%;
   margin: 0 auto;
 }
-
 div[class^="col-"] {
   box-sizing: border-box;
-  flex-wrap: wrap;
   padding: 1rem 0;
 }
 
@@ -63,14 +67,20 @@ div[class^="col-"] {
   clear: both;
 }
 
+
 // Gutter Section
 .gutter-0 {
   margin: 0;
 }
-
+.gutter-hor-auto {
+  margin: 0 auto;
+}
+.gutter-ver-auto {
+  margin: auto 0;
+}
 @for$i from 1 through 20 {
   .gutter-t-#{$i} {
-    margin-left: $gutter * $i;
+    margin-top: $gutter * $i;
   }
   .gutter-r-#{$i} {
     margin-right: $gutter * $i;
@@ -94,7 +104,7 @@ div[class^="col-"] {
 @for$i from 1 through 5 {
   .btn-#{$i} {
     width: $btn-width * $i;
-    height: $btn-height * $i;
+    // height: $btn-height * $i;
     text-align: center;
     outline: none;
   }
@@ -120,6 +130,12 @@ div[class^="col-"] {
   .padding-#{$i} {
     padding: $padding * $i;
   }
+  .padding-hor-#{$i} {
+    padding: 0 $padding * $i;
+  }
+  .padding-vert-#{$i} {
+    padding: $padding * $i 0;
+  }
 }
 
 /*height */
@@ -128,7 +144,7 @@ div[class^="col-"] {
 }
 @for $i from 1 through 20 {
   .h-#{$i} {
-    padding-top: $height * $i;
+    height: $height * $i;
   }
 }
 
@@ -137,7 +153,7 @@ div[class^="col-"] {
   width: 100%;
 }
 @for $i from 1 through 20 {
-  .h-#{$i} {
+  .w-#{$i} {
     width: $width * $i;
   }
 }
@@ -145,7 +161,7 @@ div[class^="col-"] {
 /*text -size*/
 @for $i from 1 through 20 {
   .text-size-#{$i} {
-    padding-top: $height * $i;
+    font-size: $height * $i;
   }
 }
 
@@ -165,6 +181,23 @@ div[class^="col-"] {
 /*utillities end*/
 
 // CLASSES
+.section-1 {
+  h1 {
+    color: $main-color;
+  }
+  h2 {
+
+  }
+
+
+}
+.text-center {
+  @include text-position(center);
+}
+.downloadbutton {
+  border: 1px solid $black;
+  @include border-smooth($border-height);
+}
 
 .header {
   background-color: $main-color;
@@ -178,6 +211,19 @@ div[class^="col-"] {
       a {
         @include text-decoration(none, $white);
       }
+    }
+    ul {
+      display:inline-block;
+    }
+    div {
+      display: inline-block;
+      float: right;
+      a {
+        display: inline-block;
+        color:$white;
+        @include text-decoration(none, $white);
+      }
+
     }
   }
 }
