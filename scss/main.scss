@@ -5,6 +5,7 @@ $grey: #6c757d;
 $yellow: #ffe484;
 $blue: #007bff;
 $white: white;
+$black: black;
 $columns: 12;
 $gutter: 0.25rem;
 $btn-width: 2rem;
@@ -13,7 +14,8 @@ $padding: 0.25rem;
 $height: 1em;
 $width: 1em;
 $text-size: 0.25rem;
-
+$text-weight: 100;
+$line-height: 0.25;
 .container {
   width: 90%;
   margin: 0 auto;
@@ -23,7 +25,6 @@ div[class^="col-"] {
   box-sizing: border-box;
   flex-wrap: wrap;
   padding: 1rem 0;
-  text-align: center;
 }
 
 //Use in Styles
@@ -40,36 +41,46 @@ div[class^="col-"] {
   vertical-align: $value;
 }
 
-@mixin text-decoration($value) {
+@mixin text-decoration($value, $color) {
   text-decoration: $value;
+  color: $color;
 }
 
 @mixin position($value) {
   position: $value;
 }
+
+@mixin display($value) {
+  display: $value;
+}
+
 .fluid-right {
   right: 0;
   @include position(absolute);
-
 }
+
+.clear {
+  clear: both;
+}
+
 // Gutter Section
 .gutter-0 {
   margin: 0;
 }
+
 @for$i from 1 through 20 {
   .gutter-t-#{$i} {
     margin-left: $gutter * $i;
   }
   .gutter-r-#{$i} {
-    margin-left: $gutter * $i;
+    margin-right: $gutter * $i;
   }
   .gutter-b-#{$i} {
-    margin-left: $gutter * $i;
+    margin-bottom: $gutter * $i;
   }
   .gutter-l-#{$i} {
     margin-left: $gutter * $i;
   }
-
 }
 
 /* columns */
@@ -125,7 +136,7 @@ div[class^="col-"] {
 .w-100 {
   width: 100%;
 }
-@for $i from 1 through 20 { 
+@for $i from 1 through 20 {
   .h-#{$i} {
     width: $width * $i;
   }
@@ -138,30 +149,55 @@ div[class^="col-"] {
   }
 }
 
+// text weight
+@for $i from 1 through 9 {
+  .fw-#{$i} {
+    font-weight: $text-weight * $i;
+  }
+}
+
+@for $i from 1 through 20 {
+  .lh-#{$i} {
+    line-height: $line-height * $i;
+  }
+}
+
 /*utillities end*/
 
-// CLASSES 
+// CLASSES
 
 .header {
   background-color: $main-color;
   @include position(fixed);
-  
-  .navbar {
 
-    
+  .navbar {
     li {
       display: inline-block;
       @include align-vertical(middle);
-      
+
       a {
-        color:$white;
-        @include text-decoration(none);
+        @include text-decoration(none, $white);
       }
     }
-  
-
   }
 }
 
+//footer
 
+.footer {
+  div {
+    ul {
+      li {
+        @include display(inline-block);
+      }
+    }
+  }
 
+  a {
+    @include text-decoration(none, $black);
+    color: black;
+    &:hover {
+      @include text-decoration(underline, blue);
+    }
+  }
+}
