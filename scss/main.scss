@@ -10,6 +10,7 @@ $btn-width: 2rem;
 $btn-height: 1rem;
 $padding: 0.25rem;
 $height: 1em;
+$width: 1em;
 $text-size: 0.25rem;
 
 .container {
@@ -83,10 +84,17 @@ div[class^="col-"] {
 
 /*height */
 @for $i from 1 through 20 {
-  .height-#{$i} {
+  .h-#{$i} {
     padding-top: $height * $i;
   }
 }
+
+@for $i from 1 through 20 {
+  .w-#{$i} {
+    padding-top: $height * $i;
+  }
+}
+
 /*text -size*/
 @for $i from 1 through 20 {
   .text-size-#{$i} {
