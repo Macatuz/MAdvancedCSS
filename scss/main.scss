@@ -10,6 +10,7 @@ $bg-color: #f8f9fa;
 $grey: #6c757d;
 $yellow: #ffe484;
 $blue: #007bff;
+$light-purple: #cbbde2;
 $white: white;
 $black: black;
 $columns: 12;
@@ -24,40 +25,15 @@ $width: 1em;
 $text-size: 0.25rem;
 $text-weight: 100;
 $line-height: 0.25;
-
-// text-colors
-
-.grey {
-  color: $grey;
-}
-
-.white {
-  color: $white;
-}
-
-.blue {
-  color: $blue;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-div[class^="col-"] {
-  box-sizing: border-box;
-  padding: 1rem 0;
-}
-
 //Use in Styles
 
 @mixin border-smooth($value) {
   border-radius: $value;
 }
 
+@mixin border($color) {
+  border: 1px solid $color;
+}
 @mixin text-position($value) {
   text-align: $value;
 }
@@ -82,6 +58,43 @@ div[class^="col-"] {
   float: $value;
 }
 
+// text-colors
+.grey {
+  color: $grey;
+}
+
+.white {
+  color: $white;
+}
+
+.blue {
+  color: $blue;
+}
+.yellow {
+  color: $yellow;
+}
+
+.border-yellow {
+  @include border($yellow);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+div[class^="col-"] {
+  box-sizing: border-box;
+  padding: 1rem 0;
+}
+
+%border-thick {
+  border-right: 5px solid $white;
+}
+
 .fluid-right {
   right: 0;
   @include position(absolute);
@@ -93,7 +106,7 @@ div[class^="col-"] {
 
 // Gutter Section
 .gutter-0 {
-  margin: 0;
+  margin: 0 auto;
 }
 .gutter-hor-auto {
   margin: 0 auto;
@@ -105,6 +118,7 @@ div[class^="col-"] {
   .gutter-t-#{$i} {
     margin-top: $gutter * $i;
   }
+
   .gutter-r-#{$i} {
     margin-right: $gutter * $i;
   }
@@ -120,6 +134,26 @@ div[class^="col-"] {
   .gutter-ver-#{$i} {
     margin: $gutter * $i 0;
   }
+
+  .gutter-nt-#{$i} {
+    margin-top: -$gutter * $i;
+  }
+
+  .gutter-nr-#{$i} {
+    margin-right: -$gutter * $i;
+  }
+  .gutter-nb-#{$i} {
+    margin-bottom: -$gutter * $i;
+  }
+  .gutter-nl-#{$i} {
+    margin-left: -$gutter * $i;
+  }
+  .gutter-nhor-#{$i} {
+    margin: 0 -$gutter * $i;
+  }
+  .gutter-nver-#{$i} {
+    margin: -$gutter * $i 0;
+  }
 }
 
 /* columns */
@@ -130,7 +164,7 @@ div[class^="col-"] {
 }
 
 /* buttons */
-@for$i from 1 through 5 {
+@for $i from 1 through 10 {
   .btn-#{$i} {
     width: $btn-width * $i;
     // height: $btn-height * $i;
@@ -210,14 +244,23 @@ div[class^="col-"] {
   }
 }
 
+@for $i from 1 through 10 {
+  @if $i > 2 {
+    .smooth-#{$i} {
+      transition: all 0.2s * $i ease-in;
+    }
+  } @else {
+    .smooth-#{$i} {
+      transition: all 0.2s ease-in;
+    }
+  }
+}
 /*utillities end*/
 
 // CLASSES
 .section-1 {
   h1 {
-    color: $main-color;
-  }
-  h2 {
+    color: $secondary-color;
   }
 }
 .text-center {
@@ -226,11 +269,40 @@ div[class^="col-"] {
 .downloadbutton {
   border: 1px solid $black;
   @include border-smooth($border-height);
+
+  &:hover {
+    background: $grey;
+    color: white;
+  }
+}
+
+.downloadbutton-1 {
+  border: 1px solid $secondary-color;
+  @include border-smooth($border-height);
+
+  &:hover {
+    background: $secondary-color;
+    color: white;
+  }
+}
+.downloadbutton-3 {
+  @include border-smooth($border-height);
+  background-color: $main-color;
+  &:hover {
+    background: $yellow;
+    color: $main-color;
+  }
 }
 
 .header {
   background-color: $main-color;
   @include position(fixed);
+
+  svg {
+    path:nth-child(3) {
+      fill: $white;
+    }
+  }
 
   .navbar {
     li {
@@ -238,9 +310,13 @@ div[class^="col-"] {
       @include align-vertical(middle);
 
       a {
-        @include text-decoration(none, $white);
+        @include text-decoration(none, $light-purple);
+        &:hover {
+          color: $white;
+        }
       }
     }
+
     ul {
       display: inline-block;
     }
@@ -249,8 +325,7 @@ div[class^="col-"] {
       @include float(right);
       a {
         display: inline-block;
-        color: $white;
-        @include text-decoration(none, $white);
+        @include text-decoration(none, $light-purple);
       }
     }
   }
@@ -259,10 +334,11 @@ div[class^="col-"] {
 .install-section {
   background-color: $bg-color;
   div {
+    @extend %border-thick;
   }
 
   svg {
-    outline-color: #007bff;
+    stroke: $blue;
   }
 
   h3 {
