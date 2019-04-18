@@ -1783,46 +1783,46 @@ div[class^="col-"] {
       text-decoration: underline;
       color: blue; }
 
-.col-md-1 {
-  flex: 0 0 100%; }
-
-.col-md-2 {
-  flex: 0 0 100%; }
-
-.col-md-3 {
-  flex: 0 0 100%; }
-
-.col-md-4 {
-  flex: 0 0 100%; }
-
-.col-md-5 {
-  flex: 0 0 100%; }
-
-.col-md-6 {
-  flex: 0 0 100%; }
-
-.col-md-7 {
-  flex: 0 0 100%; }
-
-.col-md-8 {
-  flex: 0 0 100%; }
-
-.col-md-9 {
-  flex: 0 0 100%; }
-
-.col-md-10 {
-  flex: 0 0 100%; }
-
-.col-md-11 {
-  flex: 0 0 100%; }
-
-.col-md-12 {
-  flex: 0 0 100%; }
-
 @media (max-width: 1200px) {
   .big-logo svg {
     margin-top: 5em; } }
 @media (max-width: 750px) {
+  .col-md-1 {
+    flex: 0 0 100%; }
+
+  .col-md-2 {
+    flex: 0 0 100%; }
+
+  .col-md-3 {
+    flex: 0 0 100%; }
+
+  .col-md-4 {
+    flex: 0 0 100%; }
+
+  .col-md-5 {
+    flex: 0 0 100%; }
+
+  .col-md-6 {
+    flex: 0 0 100%; }
+
+  .col-md-7 {
+    flex: 0 0 100%; }
+
+  .col-md-8 {
+    flex: 0 0 100%; }
+
+  .col-md-9 {
+    flex: 0 0 100%; }
+
+  .col-md-10 {
+    flex: 0 0 100%; }
+
+  .col-md-11 {
+    flex: 0 0 100%; }
+
+  .col-md-12 {
+    flex: 0 0 100%; }
+
   .main p {
     text-align: center;
     width: 80%;
