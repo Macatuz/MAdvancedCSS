@@ -104,13 +104,13 @@ div[class^="col-"] {
   clear: both; }
 
 .gutter-0 {
-  margin: 0 auto !important; }
+  margin: 0 auto; }
 
 .gutter-hor-auto {
-  margin: 0 auto !important; }
+  margin: 0 auto; }
 
 .gutter-ver-auto {
-  margin: auto 0 !important; }
+  margin: auto 0; }
 
 .gutter-t-1 {
   margin-top: 0.25rem; }
@@ -1711,6 +1711,10 @@ div[class^="col-"] {
   transition: all 2s ease-in; }
 
 /*utillities end*/
+.big-logo {
+  width: 512px;
+  height: 430px; }
+
 .section-1 h1 {
   color: #7952b3; }
 
@@ -1726,7 +1730,8 @@ div[class^="col-"] {
 
 .downloadbutton-1 {
   border: 1px solid #7952b3;
-  border-radius: 0.25rem; }
+  border-radius: 0.25rem;
+  color: #7952b3; }
   .downloadbutton-1:hover {
     background: #7952b3;
     color: white; }
@@ -1777,5 +1782,66 @@ div[class^="col-"] {
     .footer a:hover {
       text-decoration: underline;
       color: blue; }
+
+.col-md-1 {
+  flex: 0 0 100%; }
+
+.col-md-2 {
+  flex: 0 0 100%; }
+
+.col-md-3 {
+  flex: 0 0 100%; }
+
+.col-md-4 {
+  flex: 0 0 100%; }
+
+.col-md-5 {
+  flex: 0 0 100%; }
+
+.col-md-6 {
+  flex: 0 0 100%; }
+
+.col-md-7 {
+  flex: 0 0 100%; }
+
+.col-md-8 {
+  flex: 0 0 100%; }
+
+.col-md-9 {
+  flex: 0 0 100%; }
+
+.col-md-10 {
+  flex: 0 0 100%; }
+
+.col-md-11 {
+  flex: 0 0 100%; }
+
+.col-md-12 {
+  flex: 0 0 100%; }
+
+@media (max-width: 1200px) {
+  .big-logo svg {
+    margin-top: 5em; } }
+@media (max-width: 750px) {
+  .main p {
+    text-align: center;
+    width: 80%;
+    margin: 1em auto; }
+  .main button {
+    display: block;
+    width: 100%; }
+
+  .heading {
+    text-align: center; }
+
+  .col-md-6 {
+    flex: 0 0 80%;
+    margin: 0 auto; }
+
+  .big-logo {
+    width: 50% !important; }
+    .big-logo svg {
+      margin: 0 auto !important;
+      width: 80%; } }
 
 /*# sourceMappingURL=main.css.map */

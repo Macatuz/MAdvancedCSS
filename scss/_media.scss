@@ -1,0 +1,41 @@
+@for $i from 1 through $columns {
+  .col-md-#{$i} {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .big-logo {
+    svg {
+      margin-top: 5em;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .main {
+    p {
+      text-align: center;
+      width: 80%;
+      margin: 1em auto;
+    }
+    button {
+      display: block;
+      width: 100%;
+    }
+  }
+  .heading {
+    text-align: center;
+  }
+  .col-md-6 {
+    flex: 0 0 80%;
+    margin: 0 auto;
+  }
+  .big-logo {
+    width: 50% !important;
+    svg {
+      margin: 0 auto !important;
+      width: 80%;
+    }
+  }
+}
