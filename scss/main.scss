@@ -57,6 +57,10 @@ $line-height: 0.25;
 @mixin float($value) {
   float: $value;
 }
+// displays 
+.hide {
+  @include display(none);
+}
 // backround-colors
 .redback {
   background-color: red;
@@ -275,8 +279,12 @@ div[class^="col-"] {
 // CLASSES
 
 .big-logo {
-  width: 512px;
-  height: 430px;
+  max-width: 512px;
+  max-height: 430px;
+}
+.force-none {
+  position: absolute;
+  opacity: 0;
 }
 .section-1 {
   h1 {

@@ -5,7 +5,17 @@
     }
   }
 }
-
+@media (max-width: 992px) { 
+  .downloadbutton-3 {
+    display: none;
+  }
+}
+@media (max-width: 832px) {  
+  .col-md-4 {
+    flex: 0 0 100%;
+    display: block;
+  }
+}
 @media (max-width: 750px) {
   @for $i from 1 through $columns {
     .col-md-#{$i} {
@@ -36,6 +46,76 @@
     svg {
       margin: 0 auto !important;
       width: 80%;
+    }
+  }
+  .force-none {
+    position: unset !important;
+    opacity: 1 !important;
+    margin: 0 auto !important;
+  }
+  .big-logo-1 {
+    position: unset !important;
+    opacity: 1 !important;
+    margin: 0 auto !important;
+    height: unset !important;
+    margin-top: 5rem !important;
+  }
+  .big-logo-2 {
+    position: absolute;
+    opacity: 0;
+
+
+  }
+
+}
+
+
+@media (max-width: 772px) { 
+  
+  .header {
+    background-color: $main-color;
+    @include text-position(center);
+    @include position(fixed);
+  
+    svg {
+      display: block;
+      path:nth-child(3) {
+        fill: $white;
+      }
+    }
+  
+    .navbar {
+      li {
+        display: inline-block;
+        @include align-vertical(middle);
+        &:first-of-type {
+          display: block;
+        }
+        a {
+          @include text-decoration(none, $light-purple);
+          &:hover {
+            color: $white;
+
+
+          }
+          svg {
+            margin: 1rem auto;
+          }
+
+        }
+      }
+  
+      ul {
+        display: inline-block;
+      }
+      div {
+        display: none;
+        @include float(right);
+        a {
+          display: inline-block;
+          @include text-decoration(none, $light-purple);
+        }
+      }
     }
   }
 }
