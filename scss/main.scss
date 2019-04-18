@@ -57,8 +57,23 @@ $line-height: 0.25;
 @mixin float($value) {
   float: $value;
 }
+// backround-colors
+.redback {
+  background-color: red;
+}
+@for$i from 1 through 10 { 
+  .black-#{$i*10} {
+    background-color: rgba(0,0,0, ($i / 10)-.05)
+  }
+}
 
 // text-colors
+
+@for$i from 1 through 10 { 
+   .text-color-black-#{$i*10} {
+    color: rgba(0,0,0, ($i / 10)-.05)
+  }
+}
 .grey {
   color: $grey;
 }
@@ -83,7 +98,7 @@ $line-height: 0.25;
   flex-wrap: wrap;
 }
 .container {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
 }
 div[class^="col-"] {
@@ -106,13 +121,13 @@ div[class^="col-"] {
 
 // Gutter Section
 .gutter-0 {
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 .gutter-hor-auto {
-  margin: 0 auto;
+  margin: 0 auto !important;
 }
 .gutter-ver-auto {
-  margin: auto 0;
+  margin: auto 0 !important;
 }
 @for$i from 1 through 20 {
   .gutter-t-#{$i} {
@@ -175,7 +190,7 @@ div[class^="col-"] {
 
 /*padding*/
 .padding-0 {
-  padding: 0;
+  padding: 0 !important;
 }
 @for $i from 1 through 20 {
   .padding-t-#{$i} {
@@ -200,7 +215,7 @@ div[class^="col-"] {
     padding: $padding * $i 0;
   }
   .padding-#{$i} {
-    padding: $padding * $i;
+    padding: $padding * $i !important;
   }
 }
 
@@ -293,6 +308,7 @@ div[class^="col-"] {
     color: $main-color;
   }
 }
+
 
 .header {
   background-color: $main-color;
