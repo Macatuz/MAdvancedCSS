@@ -14,6 +14,10 @@ A beautiful and easy to use css framework for Developers. Have your website look
 You can get Started by cloning [Beautiful-Ui](https://github.com/Ispirett/Beautiful-Ui) repo,
 or download the css file and adding it to your project.
 
+## Live Site demo using Beautiful-Ui
+
+[Bootstrap Site clone](https://ispirett.github.io/Beautiful-Ui/)
+
 ## Examples:
 
 ##### Layout your site semantics with our easy to use fluid grid system.
