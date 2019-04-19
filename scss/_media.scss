@@ -36,7 +36,7 @@
   }
 
   .code-container {
-    width: 100% !important;
+    width: 100%;
   }
   .main {
     p {
@@ -57,23 +57,23 @@
     margin: 0 auto;
   }
   .big-logo {
-    width: 50% ;
+    width: 50%;
     svg {
       margin: 0 auto;
       width: 80%;
     }
   }
   .force-none {
-    position: unset !important;
-    opacity: 1 !important;
-    margin: 0 auto !important;
+    position: unset;
+    opacity: 1;
+    margin: 0 auto;
   }
   .big-logo-1 {
-    position: unset ;
-    opacity: 1 ;
-    margin: 0 auto ;
-    height: unset ;
-    margin-top: 5rem ;
+    position: unset;
+    opacity: 1;
+    margin: 0 auto;
+    height: unset;
+    margin-top: 5rem;
   }
   .big-logo-2 {
     position: absolute;
