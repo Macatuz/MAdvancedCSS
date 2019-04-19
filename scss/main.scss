@@ -25,6 +25,7 @@ $width: 1em;
 $text-size: 0.25rem;
 $text-weight: 100;
 $line-height: 0.25;
+
 //Use in Styles
 
 @mixin border-smooth($value) {
@@ -57,7 +58,7 @@ $line-height: 0.25;
 @mixin float($value) {
   float: $value;
 }
-// displays 
+// displays
 .hide {
   @include display(none);
 }
@@ -65,19 +66,32 @@ $line-height: 0.25;
 .redback {
   background-color: red;
 }
-@for$i from 1 through 10 {
-  .black-#{$i*10} {
-    background-color: rgba(0, 0, 0, ($i / 10)-0.05);
+
+.to-x {
+  overflow-x: scroll;
+}
+.to-y {
+  overflow-y: scroll;
+}
+
+.d-block {
+  display: block;
+}
+
+.btn-link {
+  @include border($blue);
+  @include border-smooth(0.3rem);
+  display: block;
+  @include text-position(center);
+  @include text-decoration(none, $blue);
+
+  &:hover {
+    background: $blue;
+    color: $white;
   }
 }
 
 // text-colors
-
-@for$i from 1 through 10 {
-  .text-color-black-#{$i*10} {
-    color: rgba(0, 0, 0, ($i / 10)-0.05);
-  }
-}
 .grey {
   color: $grey;
 }
@@ -93,6 +107,13 @@ $line-height: 0.25;
   color: $yellow;
 }
 
+.red {
+  color: red;
+}
+
+.purple {
+  color: $light-purple;
+}
 .border-yellow {
   @include border($yellow);
 }
@@ -111,7 +132,7 @@ div[class^="col-"] {
 }
 
 %border-thick {
-  border-right: 5px solid $white;
+  border-right: 2px solid $white;
 }
 
 .fluid-right {
@@ -191,7 +212,18 @@ div[class^="col-"] {
     outline: none;
   }
 }
+// colors
+@for$i from 1 through 10 {
+  .black-#{$i*10} {
+    background-color: rgba(0, 0, 0, ($i / 10)-0.05);
+  }
+}
 
+@for$i from 1 through 10 {
+  .text-color-black-#{$i*10} {
+    color: rgba(0, 0, 0, ($i / 10)-0.05);
+  }
+}
 /*padding*/
 .padding-0 {
   padding: 0 !important;
@@ -219,7 +251,7 @@ div[class^="col-"] {
     padding: $padding * $i 0;
   }
   .padding-#{$i} {
-    padding: $padding * $i !important;
+    padding: $padding * $i;
   }
 }
 
@@ -237,7 +269,7 @@ div[class^="col-"] {
 .w-100 {
   width: 100%;
 }
-@for $i from 1 through 20 {
+@for $i from 1 through 30 {
   .w-#{$i} {
     width: $width * $i;
   }
@@ -278,10 +310,17 @@ div[class^="col-"] {
 
 // CLASSES
 
+.code {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
 .big-logo {
   max-width: 512px;
   max-height: 430px;
 }
+
 .force-none {
   position: absolute;
   opacity: 0;
@@ -369,9 +408,6 @@ div[class^="col-"] {
   svg {
     stroke: $blue;
   }
-
-  h3 {
-  }
 }
 
 //footer
@@ -394,5 +430,5 @@ div[class^="col-"] {
     }
   }
 }
-
+// media
 @import "media";

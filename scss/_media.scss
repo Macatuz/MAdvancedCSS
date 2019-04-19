@@ -1,3 +1,9 @@
+// overides
+.f-d-row {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 @media (max-width: 1200px) {
   .big-logo {
     svg {
@@ -5,12 +11,15 @@
     }
   }
 }
-@media (max-width: 992px) { 
+@media (max-width: 992px) {
   .downloadbutton-3 {
-    display: none;
+    display: block;
+  }
+  .f-d-row {
+    flex-direction: column;
   }
 }
-@media (max-width: 832px) {  
+@media (max-width: 832px) {
   .col-md-4 {
     flex: 0 0 100%;
     display: block;
@@ -22,7 +31,13 @@
       flex: 0 0 100%;
     }
   }
+  .f-d-row {
+    flex-direction: column;
+  }
 
+  .code-container {
+    width: 100% !important;
+  }
   .main {
     p {
       text-align: center;
@@ -63,27 +78,22 @@
   .big-logo-2 {
     position: absolute;
     opacity: 0;
-
-
   }
-
 }
 
-
-@media (max-width: 772px) { 
-  
+@media (max-width: 772px) {
   .header {
     background-color: $main-color;
     @include text-position(center);
     @include position(fixed);
-  
+
     svg {
       display: block;
       path:nth-child(3) {
         fill: $white;
       }
     }
-  
+
     .navbar {
       li {
         display: inline-block;
@@ -95,16 +105,13 @@
           @include text-decoration(none, $light-purple);
           &:hover {
             color: $white;
-
-
           }
           svg {
             margin: 1rem auto;
           }
-
         }
       }
-  
+
       ul {
         display: inline-block;
       }
