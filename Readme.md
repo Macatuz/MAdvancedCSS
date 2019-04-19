@@ -7,15 +7,16 @@
 
 # Beautiful-Ui
 
-A beautiful and easy to use css framework for Developers. Have your website looking beautiful in Minutes.
+A beautiful and easy to use css framework for Developers. Have your website looking beautiful in minutes.
 
-##Getting Started
-You can get Started by cloning [Beautiful-Ui](https://github.com/Ispirett/Beautiful-Ui) this repo,
+## Getting Started
+
+You can get Started by cloning [Beautiful-Ui](https://github.com/Ispirett/Beautiful-Ui) repo,
 or download the css file and adding it to your project.
 
 ## Examples:
 
-##### Layout your site semantics with our easily with our fluid grid system
+##### Layout your site semantics with our easy to use fluid grid system.
 
 ```
 <div class="row">
@@ -26,13 +27,13 @@ or download the css file and adding it to your project.
 </div>
 ```
 
-##### Create buttons with ease
+##### Create buttons with ease.
 
 ```
 <button class="btn-5 bg-blue h-4"></button>
 ```
 
-##### Positions elements where ever you need
+##### Positions elements where ever you need.
 
 ```
 <div class=" text-center col-md-2 f-left gutter-l-2 ">
@@ -71,7 +72,7 @@ or download the css file and adding it to your project.
 
 ```
 
-##### Add padding to your elements by.
+##### Add padding to your elements.
 
 ```
 <div class=" text-center col-md-2 f-left  padding-20">
@@ -121,6 +122,6 @@ or download the css file and adding it to your project.
 
 Please read our Contribution.md file to understand how to contribute. All contributions are welcome small or large :)
 
-###License
+### License
 
 This project is licensed under the MIT License for more info read the LICENSE.md.
